@@ -11,8 +11,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'akinsho/toggleterm.nvim'
-
+Plug 'itchyny/lightline.vim'
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
@@ -62,9 +62,19 @@ vmap <S-Tab> <gv
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
 
-
 " sourcing COC LSP
 source $HOME/.config/nvim/plug-config/coc.vim
+
+" floating terminal
+nnoremap   <silent>   <F7>    :FloatermNew<CR>
+tnoremap   <silent>   <F7>    <C-\><C-n>:FloatermNew<CR>
+nnoremap   <silent>   <F8>    :FloatermPrev<CR>
+tnoremap   <silent>   <F8>    <C-\><C-n>:FloatermPrev<CR>
+nnoremap   <silent>   <F9>    :FloatermNext<CR>
+tnoremap   <silent>   <F9>    <C-\><C-n>:FloatermNext<CR>
+nnoremap   <silent>   <F12>   :FloatermToggle<CR>
+tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
+
 
 
 
