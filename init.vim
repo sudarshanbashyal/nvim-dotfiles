@@ -34,6 +34,8 @@ inoremap kj <ESC> " k+j to get to normal mode
 inoremap <C-Z> <C-o>:u<CR> " undo in insert mode
 nnoremap <C-z> u <CR> " undo in normal mode
 
+nmap <F2> <Plug>(coc-rename)
+
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
@@ -84,17 +86,6 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
-
-
-
-
-
-
-
-
-
-
-
 
 
 
