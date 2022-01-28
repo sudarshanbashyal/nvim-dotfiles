@@ -13,15 +13,19 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'itchyny/lightline.vim'
 Plug 'voldikss/vim-floaterm'
+Plug 'tomasiser/vim-code-dark'
+Plug 'alvan/vim-closetag'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'pangloss/vim-javascript'
 
 call plug#end()
 
 set background=dark
-colorscheme gruvbox
+colorscheme codedark
 
 map <silent> <C-n> :NERDTreeFocus <CR> " nerdtree toggle
 
-" Norma keybindings
+" Normal keybindings
 nnoremap <C-s> <C-o>:w<CR> " ctrl + s to save in normal mode
 inoremap <C-s> :w <CR> " ctrl + s to save in insert mode
 
@@ -74,6 +78,27 @@ nnoremap   <silent>   <F9>    :FloatermNext<CR>
 tnoremap   <silent>   <F9>    <C-\><C-n>:FloatermNext<CR>
 nnoremap   <silent>   <F12>   :FloatermToggle<CR>
 tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
+
+" Switching splits
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
