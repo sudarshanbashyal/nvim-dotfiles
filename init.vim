@@ -1,4 +1,6 @@
 set number
+set nowrap
+set formatoptions-=t
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -15,6 +17,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'tomasiser/vim-code-dark'
 Plug 'alvan/vim-closetag'
+Plug 'jiangmiao/auto-pairs'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
 
@@ -22,6 +25,7 @@ call plug#end()
 
 set background=dark
 colorscheme codedark
+let NERDTreeShowHidden=1
 
 map <silent> <C-n> :NERDTreeFocus <CR> " nerdtree toggle
 
@@ -42,15 +46,6 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-" Autocomplete quotes/paranthesis and such
-inoremap ( ()<Esc>i
-inoremap { {}<Esc>i
-inoremap {<CR> {<CR>}<Esc>O
-inoremap [ []<Esc>i
-inoremap < <><Esc>i
-inoremap ' ''<Esc>i
-inoremap " ""<Esc>i
-
 " Indentation/Tabs
 set smarttab
 set cindent
@@ -63,10 +58,6 @@ inoremap <S-Tab> <C-d>
 " Indenting during selection mode
 vmap <Tab> >gv
 vmap <S-Tab> <gv
-
-" Ctrl backspace
-noremap! <C-BS> <C-w>
-noremap! <C-h> <C-w>
 
 " sourcing COC LSP
 source $HOME/.config/nvim/plug-config/coc.vim
@@ -87,10 +78,8 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-
-
-
-
+" Ctrl backspace
+imap <C-BS> <C-W>
 
 
 
