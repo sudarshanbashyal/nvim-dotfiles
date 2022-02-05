@@ -2,7 +2,6 @@ set number
 set nowrap
 set formatoptions-=t
 se cursorline
-
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'morhetz/gruvbox'
@@ -25,7 +24,7 @@ Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 Plug 'mangeshrex/uwu.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
+Plug 'psliwka/vim-smoothie'
 call plug#end()
 
 set background=dark
@@ -133,5 +132,8 @@ let g:NERDTreeSyntaxDisableDefaultExactMatches = 1
 let g:NERDTreeSyntaxDisableDefaultPatternMatches = 1
 let g:NERDTreeSyntaxEnabledExtensions = ['js', 'css', 'html', 'ts', 'tsx', 'jsx', 'py', 'json'] " enabled extensions with default colors
 let g:NERDTreeSyntaxEnabledExactMatches = ['node_modules', 'favicon.ico'] " enabled exact matches with default colors
+
+
+" smooth scroll
 
 
