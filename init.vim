@@ -1,7 +1,9 @@
 set number
 set nowrap
 set formatoptions-=t
-se cursorline
+set cursorline
+set ignorecase 
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'morhetz/gruvbox'
@@ -25,6 +27,7 @@ Plug 'mangeshrex/uwu.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'psliwka/vim-smoothie'
+Plug 'pantharshit00/vim-prisma'
 call plug#end()
 
 set background=dark
@@ -83,10 +86,6 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-" Ctrl backspace
-imap <C-BS> <C-W>
-
-
 " nerd tree highlighting 
 let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
 let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
@@ -132,8 +131,5 @@ let g:NERDTreeSyntaxDisableDefaultExactMatches = 1
 let g:NERDTreeSyntaxDisableDefaultPatternMatches = 1
 let g:NERDTreeSyntaxEnabledExtensions = ['js', 'css', 'html', 'ts', 'tsx', 'jsx', 'py', 'json'] " enabled extensions with default colors
 let g:NERDTreeSyntaxEnabledExactMatches = ['node_modules', 'favicon.ico'] " enabled exact matches with default colors
-
-
-" smooth scroll
 
 
