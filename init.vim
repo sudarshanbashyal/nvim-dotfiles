@@ -3,9 +3,9 @@ set nowrap
 set formatoptions-=t
 set cursorline
 set ignorecase 
+set scrolloff=20
 
 call plug#begin('~/.config/nvim/plugged')
-
 Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
@@ -28,8 +28,10 @@ Plug 'joshdick/onedark.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'psliwka/vim-smoothie'
 Plug 'pantharshit00/vim-prisma'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
+syntax enable
 set background=dark
 colorscheme codedark
 
@@ -131,5 +133,4 @@ let g:NERDTreeSyntaxDisableDefaultExactMatches = 1
 let g:NERDTreeSyntaxDisableDefaultPatternMatches = 1
 let g:NERDTreeSyntaxEnabledExtensions = ['js', 'css', 'html', 'ts', 'tsx', 'jsx', 'py', 'json'] " enabled extensions with default colors
 let g:NERDTreeSyntaxEnabledExactMatches = ['node_modules', 'favicon.ico'] " enabled exact matches with default colors
-
 
