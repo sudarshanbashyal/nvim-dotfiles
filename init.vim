@@ -29,6 +29,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'psliwka/vim-smoothie'
 Plug 'pantharshit00/vim-prisma'
 Plug 'tpope/vim-commentary'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 syntax enable
@@ -71,6 +72,10 @@ vmap <S-Tab> <gv
 
 " sourcing COC LSP
 source $HOME/.config/nvim/plug-config/coc.vim
+
+" sourcing treesitter config
+source $HOME/.config/nvim/plug-config/treesitter-config.vim
+
 
 " floating terminal
 nnoremap   <silent>   <F7>    :FloatermNew<CR>
@@ -117,6 +122,7 @@ let s:git_orange = 'F54D27'
 
 let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
 let g:NERDTreeExtensionHighlightColor['css'] = s:blue " sets the color of css files to blue
+let g:NERDTreeExtensionHighlightColor['go'] = s:blue 
 
 let g:NERDTreeExactMatchHighlightColor = {} " this line is needed to avoid error
 let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the color for .gitignore files
@@ -124,13 +130,12 @@ let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the c
 let g:NERDTreePatternMatchHighlightColor = {} " this line is needed to avoid error
 let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red " sets the color for files ending with _spec.rb
 
-let g:WebDevIconsDefaultFolderSymbolColor = s:beige " sets the color for folders that did not match any rule
-let g:WebDevIconsDefaultFileSymbolColor = s:blue " sets the color for files that did not match any rule
+let g:WebDevIconsDefaultFolderSymbolColor = s:beige " sets the color for folders that did not match any rule let g:WebDevIconsDefaultFileSymbolColor = s:blue " sets the color for files that did not match any rule
 
 " disabling highlighting for some icons
 let g:NERDTreeSyntaxDisableDefaultExtensions = 1
 let g:NERDTreeSyntaxDisableDefaultExactMatches = 1
 let g:NERDTreeSyntaxDisableDefaultPatternMatches = 1
-let g:NERDTreeSyntaxEnabledExtensions = ['js', 'css', 'html', 'ts', 'tsx', 'jsx', 'py', 'json'] " enabled extensions with default colors
+let g:NERDTreeSyntaxEnabledExtensions = ['js', 'css', 'html', 'ts', 'tsx', 'jsx', 'py', 'json', 'go'] " enabled extensions with default colors
 let g:NERDTreeSyntaxEnabledExactMatches = ['node_modules', 'favicon.ico'] " enabled exact matches with default colors
 
