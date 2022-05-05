@@ -4,6 +4,7 @@ set formatoptions-=t
 set cursorline
 set ignorecase 
 set scrolloff=20
+set clipboard=unnamedplus
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
@@ -15,8 +16,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'itchyny/lightline.vim'
+Plug 'mhartington/oceanic-next'
 Plug 'voldikss/vim-floaterm'
+Plug 'akinsho/toggleterm.nvim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
@@ -30,25 +32,22 @@ Plug 'psliwka/vim-smoothie'
 Plug 'pantharshit00/vim-prisma'
 Plug 'tpope/vim-commentary'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
+" themes and stuff
 syntax enable
 set background=dark
+set termguicolors
 colorscheme codedark
+let g:airline_theme='codedark'
 
+" nerd tree
 let NERDTreeShowHidden=1
-
 map <silent> <C-n> :NERDTreeFocus <CR> " nerdtree toggle
 
 " Normal keybindings
-nnoremap <C-s> <C-o>:w<CR> " ctrl + s to save in normal mode
-inoremap <C-s> :w <CR> " ctrl + s to save in insert mode
-
-inoremap kj <ESC> " k+j to get to normal mode
-
-inoremap <C-Z> <C-o>:u<CR> " undo in insert mode
-nnoremap <C-z> u <CR> " undo in normal mode
-
+inoremap kj <Esc>
 nmap <F2> <Plug>(coc-rename)
 
 " Find files using Telescope command-line sugar.
@@ -56,6 +55,9 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" stop the cursor from jumping on buffer writes and saves
+let g:syntastic_auto_jump = 0
 
 " Indentation/Tabs
 set smarttab
@@ -75,7 +77,6 @@ source $HOME/.config/nvim/plug-config/coc.vim
 
 " sourcing treesitter config
 source $HOME/.config/nvim/plug-config/treesitter-config.vim
-
 
 " floating terminal
 nnoremap   <silent>   <F7>    :FloatermNew<CR>
