@@ -1,4 +1,5 @@
 set number
+set relativenumber
 set nowrap
 set formatoptions-=t
 set cursorline
@@ -33,6 +34,8 @@ Plug 'pantharshit00/vim-prisma'
 Plug 'tpope/vim-commentary'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'itchyny/lightline.vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
 
 " themes and stuff
@@ -41,6 +44,8 @@ set background=dark
 set termguicolors
 colorscheme codedark
 let g:airline_theme='codedark'
+:let g:NERDTreeWinSize=35
+
 
 " nerd tree
 let NERDTreeShowHidden=1
