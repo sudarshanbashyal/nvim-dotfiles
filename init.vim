@@ -34,18 +34,19 @@ Plug 'pantharshit00/vim-prisma'
 Plug 'tpope/vim-commentary'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'itchyny/lightline.vim'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'EdenEast/nightfox.nvim'
 call plug#end()
 
 " themes and stuff
 syntax enable
 set background=dark
 set termguicolors
-colorscheme codedark
-let g:airline_theme='codedark'
-:let g:NERDTreeWinSize=35
+colorscheme nightfox
+let g:lightline = { 'colorscheme': 'nightfox' }
+let g:NERDTreeWinSize=35
 
+" type defintion preview
+map <silent> <C-p> :call CocActionAsync('doHover') <CR>
 
 " nerd tree
 let NERDTreeShowHidden=1

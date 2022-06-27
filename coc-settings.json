@@ -6,7 +6,8 @@
 		"json",
 		"javascriptreact",
 		"xml",
-		"prisma"
+		"prisma",
+		"go"
 	],
 	"snippets.ultisnips.directories": [
 		"UltiSnips",
@@ -15,5 +16,7 @@
 	"prettier.tabWidth": 4,
 	"prettier.useTabs": true,
 	"prettier.arrowParens": "always",
-	"prettier.proseWrap": "always"
+	"prettier.proseWrap": "always",
+	"suggest.floatEnable": true,
+	"suggest.enablePreview": true
 }
